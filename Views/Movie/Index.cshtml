@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="movies" class="mt-4">
+    <section id="content">
+        <div class="container-fluid">
+            <form class="mb-4" style="background: radial-gradient(ellipse at center,#464646 0%,#171717 100%); box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 5px; ">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Actie</option>
+                            <option>Comedy</option>
+                            <option>Romantisch</option>
+                            <option>Kinderen</option>
+
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Actie</option>
+                            <option>Comedy</option>
+                            <option>Romantisch</option>
+                            <option>Kinderen</option>
+
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Actie</option>
+                            <option>Comedy</option>
+                            <option>Romantisch</option>
+                            <option>Kinderen</option>
+
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>Actie</option>
+                            <option>Comedy</option>
+                            <option>Romantisch</option>
+                            <option>Kinderen</option>
+
+                        </select>
+                    </div>
+                    <div class="col-12 form-group ">
+                        <button type="submit" class="btn btn-light d-block">Zoeken</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                @foreach (var movie in Model)
+                {
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <a asp-area="" asp-controller="Movie" asp-action="Show" asp-route-id="@movie.Id" class="card">
+                            <img class="card-img-top" src="@movie.Image" alt="@movie.Name" />
+                            <div class="card-body">
+                                <p class="card-text mb-0">@movie.Name</p>
+                                <div class="performances">
+                                    @foreach (var performance in movie.Performances)
+                                    {
+                                        <span class="performance">@performance.startTime.ToString("HH:mm"): @performance.Hall.Name</span>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</div>

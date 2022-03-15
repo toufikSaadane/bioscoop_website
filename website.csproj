@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Aspose.PDF" />
+	  <None Remove="EntityFramework" />
+	  <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
+	  <None Remove="Microsoft.EntityFrameworkCore.Design" />
+	  <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+	  <None Remove="Microsoft.EntityFrameworkCore" />
+	  <None Remove="Pomelo.EntityFrameworkCore.MySql" />
+	  <None Remove="Views\Movie\" />
+	  <None Remove="Data\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
+	  <PackageReference Include="EntityFramework" Version="6.4.4" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	    <PrivateAssets>all</PrivateAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	    <PrivateAssets>all</PrivateAssets>
+	  </PackageReference>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Views\Movie\" />
+	  <Folder Include="Data\" />
+	</ItemGroup>
+</Project>

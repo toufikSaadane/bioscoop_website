@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<section id="content" style="padding: 50px 0; background: #f5f5f5;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+                <h1 class="display-4">BlueAvans Cinema</h1>
+                <p>
+                    BlueAvans Cinema is gevestigd aan de Hogeschoollaan 1 en heeft 9 moderne zalen en 951 comfortabele zitplaatsen.
+                    Het filmaanbod is heel breed en ons personeel staat altijd klaar om je te helpen bij het uitkiezen van de geschikte
+                    film voor jouw filmuitje. Maak je filmuitje compleet met een hapje en een drankje bij een van de vele restaurants die rondom de
+                    bioscoop gevestigd zijn. Combineer je filmuitje met een etentje bij een van onderstaande CineMenu-partners en profiteer van korting op je diner en
+                    filmkaartje. De bioscoop is met de fiets, het openbaar vervoer of met de auto goed bereikbaar.
+                    Parkeren kan gratis rondom de bioscoop en de trein- en bushalte zijn op loopafstand van de bioscoop.
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <img src="https://insted.nl/wp-content/uploads/2020/03/Avans-Hogeschool-1920-1080.jpg" width="100%" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="movies-wrapper" style="padding: 50px 0; background: radial-gradient(ellipse at center,#464646 0%,#171717 100%);">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+                <h2 class="text-md-center mb-3 text-white">Nu te zien in de bioscoop</h2>
+
+                <div class="row">
+                    @foreach (var movie in Model)
+                    {
+                        <div class="col-12 col-md-4">
+                            <a asp-area="" asp-controller="Movie" asp-action="Show" asp-route-id="@movie.Id" class="card">
+                                <img class="card-img-top" src="@movie.Image" alt="@movie.Name" />
+                                <div class="card-body">
+                                    <p class="card-text mb-0">@movie.Name</p>
+                                    <div class="performances">
+                                        @foreach (var performance in movie.Performances)
+                                        {
+                                            <span class="performance">@performance.startTime.ToString("HH:mm"): @performance.Hall.Name</span>
+                                        }
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
