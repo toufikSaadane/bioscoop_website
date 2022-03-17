@@ -13,6 +13,7 @@
 	  <None Remove="Pomelo.EntityFrameworkCore.MySql" />
 	  <None Remove="Views\Movie\" />
 	  <None Remove="Data\" />
+	  <None Remove="ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
@@ -32,5 +33,6 @@
 	<ItemGroup>
 	  <Folder Include="Views\Movie\" />
 	  <Folder Include="Data\" />
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 </Project>

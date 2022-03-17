@@ -6,46 +6,143 @@
 <div id="movies" class="mt-4">
     <section id="content">
         <div class="container-fluid">
-            <form class="mb-4" style="background: radial-gradient(ellipse at center,#464646 0%,#171717 100%); box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 5px; ">
+            <form class="mb-4" asp-controller="Movie" asp-action="Index" method="get" style="background: radial-gradient(ellipse at center,#464646 0%,#171717 100%); box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 5px; ">
                 <div class="form-row">
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Actie</option>
-                            <option>Comedy</option>
-                            <option>Romantisch</option>
-                            <option>Kinderen</option>
+                        <label for="genre" class="text-white">Genre</label>
+                        <select class="form-control" name="genre" id="genre">
+                            @if (string.Equals(ViewData["genre"], "0"))
+                            {
+                                <option value="0" selected>Alle</option>
+                            }
+                            else
+                            {
+                                <option value="0">Alle</option>
 
+                            }
+                            @if (string.Equals(ViewData["genre"], "Actie"))
+                            {
+                                <option value="Actie" selected>Actie</option>
+                            }
+                            else
+                            {
+                                <option value="Actie">Actie</option>
+
+                            }
+                            @if (string.Equals(ViewData["genre"], "Comedy"))
+                            {
+                                <option value="Comedy" selected>Comedy</option>
+                            }
+                            else
+                            {
+                                <option value="Comedy">Comedy</option>
+
+                            }
+                            @if (string.Equals(ViewData["genre"], "Romantisch"))
+                            {
+                                <option value="Romantisch" selected>Romantisch</option>
+                            }
+                            else
+                            {
+                                <option value="Romantisch">Romantisch</option>
+
+                            }
+                            @if (string.Equals(ViewData["genre"], "Kinderen"))
+                            {
+                                <option value="Kinderen" selected>Romantisch</option>
+                            }
+                            else
+                            {
+                                <option value="Kinderen">Romantisch</option>
+
+                            }
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Actie</option>
-                            <option>Comedy</option>
-                            <option>Romantisch</option>
-                            <option>Kinderen</option>
-
+                        <label for="score" class="text-white">Score</label>
+                        <select class="form-control" name="score" id="score">
+                            @if (string.Equals(ViewData["score"], "desc"))
+                            {
+                                <option value="desc" selected>Hoog naar laag</option>
+                            }
+                            else
+                            {
+                                <option value="desc">Hoog naar laag</option>
+                            }
+                            @if (string.Equals(ViewData["score"], "asc"))
+                            {
+                                <option value="asc" selected>Laag naar hoog</option>
+                            }
+                            else
+                            {
+                                <option value="asc">Laag naar hoog</option>
+                            }
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Actie</option>
-                            <option>Comedy</option>
-                            <option>Romantisch</option>
-                            <option>Kinderen</option>
-
+                        <label for="age" class="text-white">Minimum leeftijd</label>
+                        <select class="form-control" id="age" name="age">
+                            @if (string.Equals(ViewData["age"], "0"))
+                            {
+                                <option value="0" selected>Geen</option>
+                            }
+                            else
+                            {
+                                <option value="0">Geen</option>
+                            }
+                            @if (string.Equals(ViewData["age"], "12"))
+                            {
+                                <option value="12" selected>12+</option>
+                            }
+                            else
+                            {
+                                <option value="12">12+</option>
+                            }
+                            @if (string.Equals(ViewData["age"], "16"))
+                            {
+                                <option value="16" selected>16+</option>
+                            }
+                            else
+                            {
+                                <option value="16">16+</option>
+                            }
+                            @if (string.Equals(ViewData["age"], "18"))
+                            {
+                                <option value="18" selected>18+</option>
+                            }
+                            else
+                            {
+                                <option value="18">18+</option>
+                            }
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="exampleFormControlSelect1" class="text-white">Genre</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>Actie</option>
-                            <option>Comedy</option>
-                            <option>Romantisch</option>
-                            <option>Kinderen</option>
-
+                        <label for="language" class="text-white">Taal</label>
+                        <select class="form-control" name="language" id="language ">
+                            @if (string.Equals(ViewData["language"], "0"))
+                            {
+                                <option value="0" selected>Alle</option>
+                            }
+                            else
+                            {
+                                <option value="0">Alle</option>
+                            }
+                            @if (string.Equals(ViewData["language"], "nl"))
+                            {
+                                <option value="nl" selected>Nederlands</option>
+                            }
+                            else
+                            {
+                                <option value="nl">Nederlands</option>
+                            }
+                            @if (string.Equals(ViewData["language"], "en"))
+                            {
+                                <option value="en" selected>Engels</option>
+                            }
+                            else
+                            {
+                                <option value="en">Engels</option>
+                            }
                         </select>
                     </div>
                     <div class="col-12 form-group ">
@@ -61,6 +158,10 @@
                             <img class="card-img-top" src="@movie.Image" alt="@movie.Name" />
                             <div class="card-body">
                                 <p class="card-text mb-0">@movie.Name</p>
+                                <span><strong>Genre:</strong> @movie.Genre</span> <br />
+                                <span><strong>Leeftijd:</strong> @movie.MinimalAge+</span><br />
+                                <span><strong>Score:</strong> @movie.Score</span><br />
+
                                 <div class="performances">
                                     @foreach (var performance in movie.Performances)
                                     {
