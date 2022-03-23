@@ -119,5 +119,19 @@ namespace website.Data
                        HallId = 1
                    },
             };
+        
+        public static List<Seats> FakeSeats
+            = new List<Seats>
+            {
+                new Seats() {Id = 1, SeatRow = "A", SeatNumber= 1},
+                new Seats() {Id = 2, SeatRow = "B", SeatNumber= 2},
+                new Seats() {Id = 3, SeatRow = "C", SeatNumber= 3},
+                new Seats() {Id = 4, SeatRow = "D", SeatNumber= 4},
+                new Seats() {Id = 5, SeatRow = "E", SeatNumber= 5},
+                new Seats() {Id = 6, SeatRow = "F", SeatNumber= 6},
+                new Seats() {Id = 7, SeatRow = "G", SeatNumber= 7},
+                new Seats() {Id = 8, SeatRow = "H", SeatNumber= 8},
+                new Seats() {Id = 9, SeatRow = "I", SeatNumber= 9}
+            };
     }
 }

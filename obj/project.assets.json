@@ -5308,19 +5308,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/milantran/.nuget/packages/": {}
+    "/Users/taoufik/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/milantran/Desktop/bioscoop_website/website.csproj",
+      "projectUniqueName": "/Users/taoufik/Sites/kotlin/bioscoop_website/website.csproj",
       "projectName": "website",
-      "projectPath": "/Users/milantran/Desktop/bioscoop_website/website.csproj",
-      "packagesPath": "/Users/milantran/.nuget/packages/",
-      "outputPath": "/Users/milantran/Desktop/bioscoop_website/obj/",
+      "projectPath": "/Users/taoufik/Sites/kotlin/bioscoop_website/website.csproj",
+      "packagesPath": "/Users/taoufik/.nuget/packages/",
+      "outputPath": "/Users/taoufik/Sites/kotlin/bioscoop_website/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/milantran/.nuget/NuGet/NuGet.Config"
+        "/Users/taoufik/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -5395,7 +5395,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

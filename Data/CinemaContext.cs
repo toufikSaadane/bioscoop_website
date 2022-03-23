@@ -13,6 +13,9 @@ namespace website.Data
         public DbSet<Hall> Halls { get; set; }
 
         public DbSet<Performance> Performances { get; set; }
+        
+        public DbSet<Seats> Seats { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -21,6 +24,7 @@ namespace website.Data
             modelBuilder.Entity<Movie>().HasData(FakeData.FakeMovie);
             modelBuilder.Entity<Hall>().HasData(FakeData.FakeHall);
             modelBuilder.Entity<Performance>().HasData(FakeData.FakePerformance);
+            modelBuilder.Entity<Seats>().HasData(FakeData.FakeSeats);
         }
     }
 }

@@ -25,7 +25,6 @@ namespace website.Controllers
         public async Task<IActionResult> Index()
         {
             var movies = await _context.Movies.Take(3).ToListAsync();
-
             return View(movies);
         }
 
