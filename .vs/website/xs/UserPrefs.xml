@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{78C6F5AE-E292-4B56-A9D0-BFE1D92E6046}|Default">
   <MonoDevelop.Ide.ItemProperties.website PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Seats/Index.cshtml">
     <Files>
       <File FileName="Controllers/CheckoutController.cs" Line="11" Column="10" />
-      <File FileName="Views/Checkout/Index.cshtml" Line="83" Column="32" />
+      <File FileName="Views/Checkout/Index.cshtml" Line="43" Column="39" />
       <File FileName="Views/Shared/_Layout.cshtml" Line="22" Column="69" />
       <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="wwwroot/css/site.css" Line="109" Column="1" />
+      <File FileName="Views/Home/Index.cshtml" Line="7" Column="51" />
+      <File FileName="Views/Seats/Index.cshtml" Line="56" Column="17" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,8 +18,15 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Checkout" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Seats" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" selected="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>

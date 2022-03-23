@@ -99,6 +99,13 @@ html {
     position: relative;
     min-height: 100%;
 }
+#thank-you-message {
+    display: none;
+}
+
+    #thank-you-message.show {
+        display: block;
+    }
 
 body {
     /* Margin bottom by footer height */
