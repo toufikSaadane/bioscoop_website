@@ -14,6 +14,10 @@ namespace website.Data
 
         public DbSet<Performance> Performances { get; set; }
 
+        public DbSet<Snack> Snacks { get; set; }
+
+        public DbSet<Arrangement> Arrangements { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -21,6 +25,8 @@ namespace website.Data
             modelBuilder.Entity<Movie>().HasData(FakeData.FakeMovie);
             modelBuilder.Entity<Hall>().HasData(FakeData.FakeHall);
             modelBuilder.Entity<Performance>().HasData(FakeData.FakePerformance);
+            modelBuilder.Entity<Snack>().HasData(FakeData.FakeSnack);
+            modelBuilder.Entity<Arrangement>().HasData(FakeData.FakeArrangement);
         }
     }
 }

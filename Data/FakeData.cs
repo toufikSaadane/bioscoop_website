@@ -88,35 +88,76 @@ namespace website.Data
                        Id = 1,
                        startTime = DateTime.Now.AddMinutes(35),
                        MovieId = 1,
-                       HallId = 2
+                       HallId = 2,
+                       ArrangementId = 1
                    },
                    new Performance
                    {
                        Id = 2,
                        startTime = DateTime.Now.AddHours(3),
                        MovieId = 2,
-                       HallId = 5
+                       HallId = 5,
+                       ArrangementId = 1
                    },
                    new Performance
                    {
                        Id = 3,
                        startTime = DateTime.Now.AddHours(4),
                        MovieId = 3,
-                       HallId = 2
+                       HallId = 2,
+                       ArrangementId = 1
                    },
                    new Performance
                    {
                        Id = 4,
                        startTime = DateTime.Now.AddHours(1),
                        MovieId = 4,
-                       HallId = 3
+                       HallId = 3,
+                       ArrangementId = 1
                    },
                    new Performance
                    {
                        Id = 5,
                        startTime = DateTime.Now.AddHours(3),
                        MovieId = 2,
-                       HallId = 1
+                       HallId = 1,
+                       ArrangementId = 1
+                   },
+            };
+
+        public static List<Snack> FakeSnack
+            = new List<Snack> {
+                new Snack
+                   {
+                       Id = 1,
+                       Name = "Popcorn",
+                       Description = "Zout",
+                       Price = 150
+                   },
+                   new Snack
+                   {
+                       Id = 2,
+                       Name = "Nacho",
+                       Description = "Vegan",
+                       Price = 150
+                   },
+            };
+
+        public static List<Arrangement> FakeArrangement
+            = new List<Arrangement> {
+                new Arrangement
+                   {
+                       Id = 1,
+                       Name = "Valentijn",
+                       Description = "Liefde",
+                       SnackId = 1
+                   },
+                   new Arrangement
+                   {
+                       Id = 2,
+                       Name = "VIP",
+                       Description = "Special Vip",
+                       SnackId = 1
                    },
             };
     }

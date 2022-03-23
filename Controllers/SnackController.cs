@@ -11,12 +11,12 @@ using website.Models;
 
 namespace website.Controllers
 {
-    public class HomeController : Controller
+    public class SnackController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<SnackController> _logger;
         private readonly CinemaContext _context;
 
-        public HomeController(CinemaContext context, ILogger<HomeController> logger)
+        public SnackController(CinemaContext context, ILogger<SnackController> logger)
         {
             _context = context;
             _logger = logger;
@@ -24,8 +24,9 @@ namespace website.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var movies = await _context.Movies.Take(3).ToListAsync();
-            return View (movies);
+            var snacks = await _context.Snacks.Take(3).ToListAsync();
+
+            return View(snacks);
         }
 
         public IActionResult Privacy()
@@ -33,10 +34,20 @@ namespace website.Controllers
             return View();
         }
 
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        // GET: /<controller>/
+        public async Task<IActionResult> Show(int? id)
+        {
+            if (id == null) { return NotFound(); }
+            var snack = await _context.Snacks.FindAsync(id.Value);
+            if (snack == null) { return NotFound(); }
+            return View(snack);
         }
     }
 }
