@@ -16,6 +16,8 @@ namespace website.Data
         
         public DbSet<Seats> Seats { get; set; }
 
+        public DbSet<Ticket> Tickets { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -6,13 +6,12 @@ namespace website.Models
     public class Ticket
     {
         public int Id { get; set; }
-        public int MovieId { get; set; }
-        public int PerformanceId { get; set; }
-        public int HallId { get; set; }
+        public int Performance_id { get; set; }
+        public int Hall_id { get; set; }
 
-        public Movie Movie { get; set; }
         public Performance Performance { get; set; }
         public Hall Hall { get; set; }
+        public ICollection<Performance> Performances { get; set; } = new List<Performance>();
 
     }
 }

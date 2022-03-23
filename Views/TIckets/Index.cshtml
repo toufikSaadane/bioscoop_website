@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Ticket Page";
+}
+
+<div class="row">
+    @foreach (var movie in Model)
+    {
+        <div class="col-12 col-md-4 col-lg-3">
+            <a asp-area="" asp-controller="Movie" asp-action="Show" asp-route-id="@movie.Id" class="card">
+                <img class="card-img-top" src="@movie.Image" alt="@movie.Name" />
+                <div class="card-body">
+                    <p class="card-text mb-0">@movie.Name</p>
+                    <div class="performances">
+                        @foreach (var performance in movie.Performances)
+                        {
+                            <span class="performance">@performance.startTime.ToString("HH:mm"): @performance.Hall.Name</span>
+                        }
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>
