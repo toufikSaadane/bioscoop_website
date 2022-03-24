@@ -69,19 +69,8 @@ namespace avansTeam.Controllers
             var movie = await _context.Movies.FindAsync(id.Value);
             if (movie == null) { return NotFound(); }
 
-            var snacks = (from snack in _context.Snacks
-                          where snack.Arrangements.Any()
-                          select snack);
+
             return View(movie);
-        }
-
-        public IActionResult Privacy()
-        {
-            var snacks = (from snack in _context.Snacks
-                          where snack.Arrangements.Any()
-                          select snack);
-
-            return View(snacks);
         }
     }
 }

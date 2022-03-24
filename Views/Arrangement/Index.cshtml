@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Arrangement";
+}
+
+<div id="movie" class="mt-5">
+    <div class="container-fluid">
+        <h1 style="text-align:center;">Arrangementen</h1>
+        <section id="movies-wrapper" style="padding: 50px 0;">
+            <div class="container-fluid">
+                <div class="row">
+                    @foreach (var Arrangement in Model)
+                    {
+                    <div class="card" style="width: 25rem; height: 25rem; margin-right:50px;">
+                        @*<img class="card-img-top" src="..." alt="Card image cap">*@
+                        <div class="card-body">
+                            <h5 class="card-title">@Arrangement.Name</h5>
+                            <p class="card-text">@Arrangement.Description</p>
+                            <h6>Kies je Snack:</h6>
+                            @*<p>
+            @foreach (var snack in Arrangement.SnackId)
+            {
+                <span>@snack.Name</span>
+            }
+        </p>*@
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+        </section>
+    </div>
+</div>
+
+

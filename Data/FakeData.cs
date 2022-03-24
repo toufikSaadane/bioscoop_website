@@ -89,7 +89,6 @@ namespace website.Data
                        startTime = DateTime.Now.AddMinutes(35),
                        MovieId = 1,
                        HallId = 2,
-                       ArrangementId = 1
                    },
                    new Performance
                    {
@@ -97,7 +96,6 @@ namespace website.Data
                        startTime = DateTime.Now.AddHours(3),
                        MovieId = 2,
                        HallId = 5,
-                       ArrangementId = 1
                    },
                    new Performance
                    {
@@ -105,7 +103,6 @@ namespace website.Data
                        startTime = DateTime.Now.AddHours(4),
                        MovieId = 3,
                        HallId = 2,
-                       ArrangementId = 1
                    },
                    new Performance
                    {
@@ -113,7 +110,6 @@ namespace website.Data
                        startTime = DateTime.Now.AddHours(1),
                        MovieId = 4,
                        HallId = 3,
-                       ArrangementId = 1
                    },
                    new Performance
                    {
@@ -121,7 +117,6 @@ namespace website.Data
                        startTime = DateTime.Now.AddHours(3),
                        MovieId = 2,
                        HallId = 1,
-                       ArrangementId = 1
                    },
             };
 

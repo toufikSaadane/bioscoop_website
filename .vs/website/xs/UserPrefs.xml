@@ -1,24 +1,30 @@
 ﻿<Properties StartupConfiguration="{78C6F5AE-E292-4B56-A9D0-BFE1D92E6046}|Default">
   <MonoDevelop.Ide.ItemProperties.website PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Helplers/MoiveHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/MovieController.cs">
     <Files>
-      <File FileName="Views/Movie/Index.cshtml" Line="13" Column="84" />
-      <File FileName="Controllers/MovieController.cs" Line="33" Column="31" />
-      <File FileName="Models/Movie.cs" Line="21" Column="47" />
-      <File FileName="ViewModels/MovieIndex.cs" Line="9" Column="44" />
-      <File FileName="Models/Performance.cs" Line="1" Column="1" />
-      <File FileName="Program.cs" Line="16" Column="1" />
-      <File FileName="Helplers/MoiveHelper.cs" Line="6" Column="19" />
+      <File FileName="Views/Movie/Show.cshtml" Line="97" Column="69" />
+      <File FileName="Controllers/HomeController.cs" Line="27" Column="13" />
+      <File FileName="Views/Movie/Index.cshtml" Line="163" Column="67" />
+      <File FileName="Controllers/ArrangementController.cs" Line="27" Column="75" />
+      <File FileName="Views/Arrangement/Index.cshtml" Line="31" Column="1" />
+      <File FileName="Controllers/MovieController.cs" Line="27" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="website" expanded="True">
             <Node name="website" expanded="True">
-              <Node name="Helplers" expanded="True">
-                <Node name="MoiveHelper.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="MovieController.cs" selected="True" />
               </Node>
-              <Node name="Views" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Arrangement" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Movie" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
