@@ -20,21 +20,7 @@
                         event.stopPropagation();
 
                     }
-                    if (form.checkValidity() === true) {
-                        thankYouMessage.classList.add('show');
-                        setTimeout(() => form.submit(), 3000);
-                        setTimeout(() => window.location.href = '/', 2000);
-                        
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    
-                    
-                    form.classList.add('was-validated');
-                    
-
-
-
+                    form.classList.add('was-validated');                  
                 }, false);
             });
 
@@ -105,11 +91,11 @@
 
                 <!--action="/" toevoegen-->
 
-                <form method="post" class="needs-validation" novalidate>
+                <form class="needs-validation" novalidate>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="Voornaam" class="form-label">Voornaam</label>
-                            <input type="text" class="form-control" id="Voornaam" placeholder="" value="" required>
+                            <input name="FirstName" type="text" class="form-control" id="Voornaam" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Uw naam is verplicht.
                             </div>
@@ -117,14 +103,14 @@
 
                         <div class="col-sm-6">
                             <label for="lastName" class="form-label">Achternaam</label>
-                            <input type="text" class="form-control" id="Achternaam" placeholder="" value="" required>
+                            <input name="LastName" type="text" class="form-control" id="Achternaam" placeholder="" value="" required>
                             <div class="invalid-feedback">
                                 Uw achternaam is verplicht
                             </div>
                         </div>
                         <div class="col-12">
                             <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            <input name="Email" type="email" class="form-control" id="email" placeholder="you@example.com">
                             <div class="invalid-feedback">
                                 Voeg een geldig emailadres toe.
                             </div>
@@ -184,7 +170,7 @@
                         </div>
                     </div>
                     <hr class="my-4">
-                    <button class="w-100 btn btn-primary btn-lg" type="submit">Betaling bevestigen</button>
+                    <button class="w-100 btn btn-primary btn-lg" asp-area="" asp-controller="Email">Betaling bevestigen</button>
                 </form>
             </div>
         </div>
