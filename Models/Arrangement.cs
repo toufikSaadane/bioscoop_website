@@ -6,6 +6,7 @@ namespace website.Models
         public int Id { get; set; }
         public String Name { get; set; }
         public String Description { get; set; }
+        public Double Price { get; set; }
         public int SnackId { get; set; }
 
         public Snack Snack { get; set; }

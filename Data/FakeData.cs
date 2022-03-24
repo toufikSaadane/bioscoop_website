@@ -145,6 +145,7 @@ namespace website.Data
                        Id = 1,
                        Name = "Valentijn",
                        Description = "Liefde",
+                       Price = 50,
                        SnackId = 1
                    },
                    new Arrangement
@@ -152,6 +153,7 @@ namespace website.Data
                        Id = 2,
                        Name = "VIP",
                        Description = "Special Vip",
+                       Price = 75,
                        SnackId = 1
                    },
             };

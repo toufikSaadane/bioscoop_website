@@ -25,10 +25,9 @@ namespace website.Controllers
         public async Task<IActionResult> Index()
         {
             var arrangements = await _context.Arrangements.Take(3).ToListAsync();
-            var snacks = await _context.Snacks.Take(3).ToListAsync();
-            var snack = (from movie in _context.Snacks
-                          where movie.Arrangements.Any()
-                          select movie);
+            var snacks = (from snack in _context.Snacks
+                          where snack.Arrangements.Any()
+                          select snack);
 
             return View(arrangements);
         }
