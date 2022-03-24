@@ -23,9 +23,13 @@
                     if (form.checkValidity() === true) {
                         thankYouMessage.classList.add('show');
                         setTimeout(() => form.submit(), 3000);
+                        setTimeout(() => window.location.href = '/', 2000);
+                        
                         event.preventDefault();
                         event.stopPropagation();
                     }
+                    
+                    
                     form.classList.add('was-validated');
                     
 
