@@ -1,0 +1,189 @@
+﻿
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<script>// Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            const form = document.querySelector('form');
+            const thankYouMessage = document.querySelector('#thank-you-message');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                    }
+                    if (form.checkValidity() === true) {
+                        thankYouMessage.classList.add('show');
+                        setTimeout(() => form.submit(), 3000);
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                    
+
+
+
+                }, false);
+            });
+
+        }, false);
+    })();</script>
+
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://i.pinimg.com/736x/0c/32/97/0c3297f3516a415219c7e89e16a4a3d2.jpg" alt="" width="72" height="57">
+            <h2>Afrekenen</h2>
+            <p class="lead">Dit is een overzicht van uw gekozen films en/of producten</p>
+        </div>
+        <div id="thank-you-message" class="alert alert-success" role="alert">
+            Uw betaling is geslaagd! Veel plezier bij de voorstelling.
+        </div>
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Uw winkelwagen</span>
+                    <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Spider man</h6>
+                            <small class="text-muted">Far from Home</small>
+                        </div>
+                        <span class="text-muted">€12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Jack Ass</h6>
+                            <small class="text-muted">Jack ass the Movie</small>
+                        </div>
+                        <span class="text-muted">€8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">The batman returns</h6>
+                            <small class="text-muted">Returning to US</small>
+                        </div>
+                        <span class="text-muted">€5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Kortingscode</h6>
+                            <small>Studentenkorting</small>
+                        </div>
+                        <span class="text-success">−€5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Totaal (EUR)</span>
+                        <strong>€20</strong>
+                    </li>
+                </ul>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Kortingscode toevoegen">
+                        <button type="submit" class="btn btn-secondary">Toevoegen</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Gegevens</h4>
+
+                <!--action="/" toevoegen-->
+
+                <form method="post" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="Voornaam" class="form-label">Voornaam</label>
+                            <input type="text" class="form-control" id="Voornaam" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Uw naam is verplicht.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Achternaam</label>
+                            <input type="text" class="form-control" id="Achternaam" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Uw achternaam is verplicht
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Voeg een geldig emailadres toe.
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h4 class="mb-3">Betaling</h4>
+
+                    <div class="my-3">
+                        <div class="form-check">
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                            <label class="form-check-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                    </div>
+
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label for="cc-name" class="form-label">Naam op uw kaart</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Volledige naam op kaart</small>
+                            <div class="invalid-feedback">
+                                Naam op kaart is verplicht
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="cc-number" class="form-label">Credit kaart nummer</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Credit kaart nummer is verplicht.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-expiration" class="form-label">Vervaldatum</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Vervaldatum is verplicht
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                                beveiligingscode is verplicht
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Betaling bevestigen</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+

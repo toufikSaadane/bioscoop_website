@@ -24,10 +24,10 @@ namespace website.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var arrangements = await _context.Arrangements.Take(3).ToListAsync();
-            var snacks = (from snack in _context.Snacks
-                          where snack.Arrangements.Any()
-                          select snack);
+            //var snacks = await _context.Snacks.ToListAsync();
+            var arrangements = await _context.Arrangements.ToListAsync();
+
+            var snacks = from arrangement in arrangements join snack in _context.Snacks on arrangement.Id equals snack.Id select arrangement; //produces flat sequence
 
             return View(arrangements);
         }

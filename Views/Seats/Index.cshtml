@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="mt-4 row justify-content-center">
+    <form>
+
+        <table>
+            @foreach (var seat in Model)
+            {
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+
+                </tr>
+                <tr>
+                    <td>@seat.SeatRow</td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="1">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="2">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="3">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="1">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="2">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="3">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="1">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="2">
+                    </td>
+                    <td>
+                        <input type="radio" name="row-1" data-col="3">
+                    </td>
+                </tr>
+            }
+        </table>
+        <br>
+        <button class="btn btn-primary" asp-area="" asp-controller="Arrangement" asp-action="Index">Ga verder</button>
+    </form>
+</div>

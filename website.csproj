@@ -14,6 +14,7 @@
 	  <None Remove="Views\Movie\" />
 	  <None Remove="Data\" />
 	  <None Remove="ViewModels\" />
+	  <None Remove="Views\Checkout\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
@@ -34,5 +35,6 @@
 	  <Folder Include="Views\Movie\" />
 	  <Folder Include="Data\" />
 	  <Folder Include="ViewModels\" />
+	  <Folder Include="Views\Checkout\" />
 	</ItemGroup>
 </Project>

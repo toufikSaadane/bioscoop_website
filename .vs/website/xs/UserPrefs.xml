@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{78C6F5AE-E292-4B56-A9D0-BFE1D92E6046}|Default">
-  <MonoDevelop.Ide.ItemProperties.website PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/MovieController.cs">
+  <MonoDevelop.Ide.ItemProperties.website PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/HomeController.cs">
     <Files>
-      <File FileName="Views/Movie/Show.cshtml" Line="97" Column="69" />
-      <File FileName="Controllers/HomeController.cs" Line="27" Column="13" />
-      <File FileName="Views/Movie/Index.cshtml" Line="163" Column="67" />
-      <File FileName="Controllers/ArrangementController.cs" Line="27" Column="75" />
-      <File FileName="Views/Arrangement/Index.cshtml" Line="31" Column="1" />
-      <File FileName="Controllers/MovieController.cs" Line="27" Column="14" />
+      <File FileName="Views/Arrangement/Index.cshtml" Line="28" Column="65" />
+      <File FileName="Views/Movie/Index.cshtml" Line="153" Column="30" />
+      <File FileName="Controllers/MovieController.cs" Line="37" Column="14" />
+      <File FileName="Controllers/ArrangementController.cs" Line="30" Column="49" />
+      <File FileName="Models/Arrangement.cs" Line="17" Column="2" />
+      <File FileName="Models/Snack.cs" Line="16" Column="8" />
+      <File FileName="Models/Performance.cs" Line="1" Column="1" />
+      <File FileName="Models/Movie.cs" Line="1" Column="1" />
+      <File FileName="Views/Seats/Index.cshtml" Line="58" Column="7" />
+      <File FileName="Controllers/HomeController.cs" Line="43" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,15 +19,15 @@
           <Node name="website" expanded="True">
             <Node name="website" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="MovieController.cs" selected="True" />
+                <Node name="HomeController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="ViewModels" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Arrangement" expanded="True" />
-                <Node name="Home" expanded="True" />
                 <Node name="Movie" expanded="True" />
+                <Node name="Seats" expanded="True" />
               </Node>
             </Node>
           </Node>

@@ -13,6 +13,7 @@ namespace website.Models
 
         public double Price { get; set; }
 
-        public ICollection<Arrangement> Arrangements { get; set; } = new List<Arrangement>();
+        //public ICollection<Arrangement> Arrangements { get; set; } = new List<Arrangement>();
+        public Arrangement Arrangement { get; set; }
     }
 }

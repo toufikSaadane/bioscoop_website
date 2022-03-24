@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace website.Models
 {
     public class Arrangement
@@ -9,6 +11,7 @@ namespace website.Models
         public Double Price { get; set; }
         public int SnackId { get; set; }
 
-        public Snack Snack { get; set; }
+        //public Snack Snack { get; set; }
+        public ICollection<Snack> Snacks { get; set; } = new List<Snack>();
     }
 }

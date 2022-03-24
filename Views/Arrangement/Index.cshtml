@@ -9,38 +9,38 @@
         <section id="movies-wrapper" style="padding: 50px 0;">
             <div class="container-fluid">
                 <div class="row">
-                    @foreach (var Arrangement in Model)
+                    @foreach (var arrangement in Model)
                     {
-                        <div class="card" style="width: 25rem; height: 30rem; margin-right:50px;">
-                            @*<img class="card-img-top" src="..." alt="Card image cap">*@
+                    <div class="card" style="width: 25rem; height: 30rem; margin-right:50px;">
                             <div class="card-body">
                                 <ul class="list-group list-group-flush">
+                                    <a asp-area="" asp-controller="Checkout" asp-action="Index" class="card">
                                     <li class="list-group-item">
-                                        <p>@Arrangement.Name</p>
+                                        <p>@arrangement.Name</p>
                                     </li>
+                                    </a>
                                     <li class="list-group-item" style="height: 200px;">
-                                        <small>@Arrangement.Description</small>
+                                        <small>@arrangement.Description</small>
                                     </li>
                                     <li class="list-group-item">
-                                        <p>€ @Arrangement.Price</p>
+                                        <p>€ @arrangement.Price ,-</p>
                                     </li>
                                     <li class="list-group-item">
                                         <h6>Kies je Snack:</h6>
                                         <select class="form-select" aria-label="Default select example">
-                                            <option selected>Kies</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option selected>Snacks</option>
+                                            <option value="1">Chips</option>
+                                            <option value="2">Popcorn</option>
+                                            <option value="3">Nacho</option>
                                         </select>
-                                    </li>
                                 </ul>
-                            </div>
-                        </div>
+                    </div>
+                        
+                    </div>
                     }
                 </div>
             </div>
         </section>
-        <button class="btn btn-primary" asp-area="" asp-controller="Arrangement" asp-action="Index">Ga verder</button>
     </div>
 </div>
 
