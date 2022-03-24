@@ -19,6 +19,7 @@
 	<ItemGroup>
 	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
 	  <PackageReference Include="EntityFramework" Version="6.4.4" />
+	  <PackageReference Include="Mailkit" Version="3.1.1" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
