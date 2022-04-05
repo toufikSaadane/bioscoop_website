@@ -13,7 +13,7 @@ namespace website.Data
         public DbSet<Hall> Halls { get; set; }
 
         public DbSet<Performance> Performances { get; set; }
-        
+
         public DbSet<Seats> Seats { get; set; }
 
         public DbSet<Snack> Snacks { get; set; }

@@ -10,23 +10,23 @@ using website.Models;
 
 namespace website.Controllers
 {
-    public class ArrangementController : Controller
+    public class PerformanceController : Controller
     {
         private readonly CinemaContext _context;
 
-        public ArrangementController(CinemaContext context)
+        public PerformanceController(CinemaContext context)
         {
             _context = context;
         }
 
-        // GET: Arrangement
+        // GET: Performance
         public async Task<IActionResult> Index()
         {
-            var cinemaContext = _context.Arrangements.Include(a => a.Snack);
+            var cinemaContext = _context.Performances.Include(p => p.Hall).Include(p => p.Movie);
             return View(await cinemaContext.ToListAsync());
         }
 
-        // GET: Arrangement/Details/5
+        // GET: Performance/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,42 +34,45 @@ namespace website.Controllers
                 return NotFound();
             }
 
-            var arrangement = await _context.Arrangements
-                .Include(a => a.Snack)
+            var performance = await _context.Performances
+                .Include(p => p.Hall)
+                .Include(p => p.Movie)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (arrangement == null)
+            if (performance == null)
             {
                 return NotFound();
             }
 
-            return View(arrangement);
+            return View(performance);
         }
 
-        // GET: Arrangement/Create
+        // GET: Performance/Create
         public IActionResult Create()
         {
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id");
+            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id");
+            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id");
             return View();
         }
 
-        // POST: Arrangement/Create
+        // POST: Performance/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,SnackId")] Arrangement arrangement)
+        public async Task<IActionResult> Create([Bind("Id,MovieId,HallId,startTime")] Performance performance)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(arrangement);
+                _context.Add(performance);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id", arrangement.SnackId);
-            return View(arrangement);
+            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id", performance.HallId);
+            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id", performance.MovieId);
+            return View(performance);
         }
 
-        // GET: Arrangement/Edit/5
+        // GET: Performance/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -77,23 +80,24 @@ namespace website.Controllers
                 return NotFound();
             }
 
-            var arrangement = await _context.Arrangements.FindAsync(id);
-            if (arrangement == null)
+            var performance = await _context.Performances.FindAsync(id);
+            if (performance == null)
             {
                 return NotFound();
             }
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id", arrangement.SnackId);
-            return View(arrangement);
+            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id", performance.HallId);
+            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id", performance.MovieId);
+            return View(performance);
         }
 
-        // POST: Arrangement/Edit/5
+        // POST: Performance/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,SnackId")] Arrangement arrangement)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MovieId,HallId,startTime")] Performance performance)
         {
-            if (id != arrangement.Id)
+            if (id != performance.Id)
             {
                 return NotFound();
             }
@@ -102,12 +106,12 @@ namespace website.Controllers
             {
                 try
                 {
-                    _context.Update(arrangement);
+                    _context.Update(performance);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ArrangementExists(arrangement.Id))
+                    if (!PerformanceExists(performance.Id))
                     {
                         return NotFound();
                     }
@@ -118,11 +122,12 @@ namespace website.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id", arrangement.SnackId);
-            return View(arrangement);
+            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id", performance.HallId);
+            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id", performance.MovieId);
+            return View(performance);
         }
 
-        // GET: Arrangement/Delete/5
+        // GET: Performance/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -130,31 +135,32 @@ namespace website.Controllers
                 return NotFound();
             }
 
-            var arrangement = await _context.Arrangements
-                .Include(a => a.Snack)
+            var performance = await _context.Performances
+                .Include(p => p.Hall)
+                .Include(p => p.Movie)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (arrangement == null)
+            if (performance == null)
             {
                 return NotFound();
             }
 
-            return View(arrangement);
+            return View(performance);
         }
 
-        // POST: Arrangement/Delete/5
+        // POST: Performance/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var arrangement = await _context.Arrangements.FindAsync(id);
-            _context.Arrangements.Remove(arrangement);
+            var performance = await _context.Performances.FindAsync(id);
+            _context.Performances.Remove(performance);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ArrangementExists(int id)
+        private bool PerformanceExists(int id)
         {
-            return _context.Arrangements.Any(e => e.Id == id);
+            return _context.Performances.Any(e => e.Id == id);
         }
     }
 }

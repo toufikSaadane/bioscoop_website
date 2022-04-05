@@ -11,7 +11,7 @@ namespace website.Models
         public Double Price { get; set; }
         public int SnackId { get; set; }
 
-        //public Snack Snack { get; set; }
-        public ICollection<Snack> Snacks { get; set; } = new List<Snack>();
+        public Snack Snack { get; set; }
+        //public ICollection<Snack> Snacks { get; set; } = new List<Snack>();
     }
 }
