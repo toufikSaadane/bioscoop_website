@@ -16,7 +16,6 @@ namespace website.Data
         
         public DbSet<Seats> Seats { get; set; }
 
-
         public DbSet<Snack> Snacks { get; set; }
 
         public DbSet<Arrangement> Arrangements { get; set; }
