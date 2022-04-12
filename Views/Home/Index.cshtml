@@ -4,6 +4,14 @@
 <section id="content" style="padding: 50px 0; background: #f5f5f5;">
     @*RowanProject*@
     <div class="container-fluid">
+        @if (User.IsInRole("Admin"))
+        {
+            <h1>Welkom Admin!</h1>
+        }
+        @if (User.IsInRole("Manager"))
+        {
+            <h1>Welkom Backoffice!</h1>
+        }
         <div class="row">
             <div class="col-12 col-md-6 col-lg-6">
                 <h1 class="display-4">BlueAvans Cinema</h1>

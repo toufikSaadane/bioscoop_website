@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top:5rem;">
+    <h2 style="text-align:center; margin-bottom:25px;">Welkom Backoffice</h2>
+    <div class="container" style="width:20rem">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Film toevoegen</div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">
+                    <form>
+                        <button asp-area="" asp-controller="Movies" asp-action="Create" type="submit" class="btn btn-dark">Kies</button>
+                    </form>
+                </h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Alle films</div>
+            <div class="card-body text-dark">
+                <h5 class="card-title">
+                    <form>
+                        <button asp-area="" asp-controller="Movies" asp-action="Index" type="submit" class="btn btn-dark">Kies</button>
+                    </form>
+                </h5>
+                <p class="card-text">Voeg eventuele nieuwe films toe die actueel zijn</p>
+            </div>
+        </div>
+    </div>
+</div>
+
