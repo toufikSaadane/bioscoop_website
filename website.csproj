@@ -15,6 +15,10 @@
 	  <None Remove="Data\" />
 	  <None Remove="ViewModels\" />
 	  <None Remove="Views\Checkout\" />
+	  <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+	  <None Remove="Microsoft.AspNetCore.Identity" />
+	  <None Remove="Microsoft.Extensions.Identity.Core" />
+	  <None Remove="Microsoft.AspNetCore.Identity.UI" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
@@ -31,6 +35,10 @@
 	  </PackageReference>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
 	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.4" />
+	  <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.4" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\Movie\" />
