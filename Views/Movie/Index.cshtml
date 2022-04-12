@@ -161,13 +161,6 @@
                                 <span><strong>Genre:</strong> @movie.Genre</span> <br />
                                 <span><strong>Leeftijd:</strong> @movie.MinimalAge+</span><br />
                                 <span><strong>Score:</strong> @movie.Score</span><br />
-
-                                <div class="performances">
-                                    @foreach (var performance in movie.Performances)
-                                    {
-                                        <span class="performance">@performance.startTime.ToString("HH:mm"): @performance.Hall.Name</span>
-                                    }
-                                </div>
                             </div>
                         </a>
                     </div>

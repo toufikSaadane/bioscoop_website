@@ -1,53 +1,42 @@
 @model IEnumerable<website.Models.Arrangement>
 
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
 
-<h1>Index</h1>
+<div class="container" style="text-align:center; margin-top:20px;">
+    <h1>Arrangementen</h1>
+    <div class="row">
+        <div class="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+    <div class="col-12 col-lg-4" style="margin-top:20px;width:25rem;">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-success text-white">@Html.DisplayFor(modelItem => item.Name)</div>
+            <div class="card-body">
+                <div style="height: 125px"> b 
+                    <p class="card-title font-weight-bold">@Html.DisplayFor(modelItem => item.Description)</p>
+                    <p class="card-text">€ @Html.DisplayFor(modelItem => item.Price)</p>
+                </div>
+                <div>
+                    <p class="card-title font-weight-bold">Snacks</p>
+                <select class="custom-select custom-select-sm">
+                    <option selected>Kies</option>
+                    <option value="1">@Html.DisplayFor(modelItem => item.Snack.Name)</option>
+                    <option value="2">@Html.DisplayFor(modelItem => item.Snack.Name)</option>
+                    <option value="3">@Html.DisplayFor(modelItem => item.Snack.Name)</option>
+                </select>
+                                </div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Snack)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Snack.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                <p>
+                </p>
+            </div>
+            <form>
+                <button class="btn btn-light" style="margin-bottom:15px; width:5rem;" asp-area="" asp-controller="Checkout" asp-action="Index">Kies</button>
+            </form>
+        </div> 
+
+    </div>}
+            </div>
+        </div>
+    </div>
+</div>

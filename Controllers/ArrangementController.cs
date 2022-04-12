@@ -48,7 +48,7 @@ namespace website.Controllers
         // GET: Arrangement/Create
         public IActionResult Create()
         {
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id");
+            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Name");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace website.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id", arrangement.SnackId);
+            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Name", arrangement.SnackId);
             return View(arrangement);
         }
 
@@ -82,7 +82,7 @@ namespace website.Controllers
             {
                 return NotFound();
             }
-            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Id", arrangement.SnackId);
+            ViewData["SnackId"] = new SelectList(_context.Snacks, "Id", "Name", arrangement.SnackId);
             return View(arrangement);
         }
 

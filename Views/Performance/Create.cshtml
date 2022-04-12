@@ -4,38 +4,34 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Performance</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="MovieId" class="control-label"></label>
-                <select asp-for="MovieId" class ="form-control" asp-items="ViewBag.MovieId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="HallId" class="control-label"></label>
-                <select asp-for="HallId" class ="form-control" asp-items="ViewBag.HallId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="startTime" class="control-label"></label>
-                <input asp-for="startTime" class="form-control" />
-                <span asp-validation-for="startTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="container" style="margin-top:5rem;">
+    <h2 style="text-align:center;">Voorstelling toevoegen</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="MovieId" class="control-label">Film</label>
+                    <select asp-for="MovieId" class="form-control" asp-items="ViewBag.MovieId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HallId" class="control-label">Hall</label>
+                    <select asp-for="HallId" class="form-control" asp-items="ViewBag.HallId"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="startTime" class="control-label">Start tijd</label>
+                    <input asp-for="startTime" class="form-control" />
+                    <span asp-validation-for="startTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="Create" class="btn btn-primary">Toevoegen</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

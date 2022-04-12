@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +41,28 @@ namespace website
             //    Configuration.GetConnectionString("DefaultConnection"));
 
             services.AddControllersWithViews();
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false).AddRoles<IdentityRole>().AddEntityFrameworkStores<CinemaContext>();
+            services.Configure<IdentityOptions>(
+                options =>
+                {
+                    // voor lesson 4-09b: Configuration check on password:
+                    options.Password.RequireUppercase = false;
+                    options.Password.RequireNonAlphanumeric = false;
+                    options.Password.RequireDigit = true;
+                    options.Password.RequiredUniqueChars = 3;
+                    options.Password.RequiredLength = 3;
+                });
+
+            services.ConfigureApplicationCookie(
+                options =>
+                {
+                    // todo lesson 4-16c configureren:
+                    options.LoginPath = "/Users/Login";
+
+                    // todo lesson 4-18 configureren: acces denied
+                    options.AccessDeniedPath = "/Users/AccessDenied";
+                });
+            services.AddRazorPages();
         }
 
 
@@ -61,6 +84,7 @@ namespace website
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -68,6 +92,7 @@ namespace website
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

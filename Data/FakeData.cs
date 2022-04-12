@@ -157,7 +157,40 @@ namespace website.Data
                        SnackId = 1
                    },
             };
-        
+
+        public static List<Review> FakeReview
+           = new List<Review> {
+                new Review
+                   {
+                       Id = 1,
+                       Name = "Valentijn",
+                       Rating = 1,
+                       Description = "Liefde",
+                   },
+                   new Review
+                   {
+                       Id = 2,
+                       Name = "VIP",
+                       Rating = 1,
+                       Description = "Special Vip",
+                   },
+           };
+
+        public static List<Enquete> FakeEnquete
+          = new List<Enquete> {
+                new Enquete
+                   {
+                       Id = 1,
+                       QuestionText = "Valentijn",
+                   },
+                   new Enquete
+                   {
+                       Id = 2,
+                       QuestionText = "VIP",
+     
+                   },
+          };
+
         public static List<Seats> FakeSeats
             = new List<Seats>
             {

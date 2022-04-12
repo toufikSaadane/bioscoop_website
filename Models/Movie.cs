@@ -17,6 +17,7 @@ namespace website.Models
         public double PriceChild { get; set; }
         public double PriceAdult { get; set; }
         public double PriceSenior { get; set; }
+        public string WorkName { get; set; }
 
         public ICollection<Performance> Performances { get; set; } = new List<Performance>();
     }

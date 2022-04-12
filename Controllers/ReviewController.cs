@@ -10,23 +10,22 @@ using website.Models;
 
 namespace website.Controllers
 {
-    public class PerformanceController : Controller
+    public class ReviewController : Controller
     {
         private readonly CinemaContext _context;
 
-        public PerformanceController(CinemaContext context)
+        public ReviewController(CinemaContext context)
         {
             _context = context;
         }
 
-        // GET: Performance
+        // GET: Review
         public async Task<IActionResult> Index()
         {
-            var cinemaContext = _context.Performances.Include(p => p.Hall).Include(p => p.Movie);
-            return View(await cinemaContext.ToListAsync());
+            return View(await _context.Reviews.ToListAsync());
         }
 
-        // GET: Performance/Details/5
+        // GET: Review/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,45 +33,39 @@ namespace website.Controllers
                 return NotFound();
             }
 
-            var performance = await _context.Performances
-                .Include(p => p.Hall)
-                .Include(p => p.Movie)
+            var review = await _context.Reviews
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (performance == null)
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View(performance);
+            return View(review);
         }
 
-        // GET: Performance/Create
+        // GET: Review/Create
         public IActionResult Create()
         {
-            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id");
-            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Name");
             return View();
         }
 
-        // POST: Performance/Create
+        // POST: Review/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,MovieId,HallId,startTime")] Performance performance)
+        public async Task<IActionResult> Create([Bind("Id,Name,Rating,Description")] Review review)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(performance);
+                _context.Add(review);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id", performance.HallId);
-            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id", performance.MovieId);
-            return View(performance);
+            return View(review);
         }
 
-        // GET: Performance/Edit/5
+        // GET: Review/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,24 +73,22 @@ namespace website.Controllers
                 return NotFound();
             }
 
-            var performance = await _context.Performances.FindAsync(id);
-            if (performance == null)
+            var review = await _context.Reviews.FindAsync(id);
+            if (review == null)
             {
                 return NotFound();
             }
-            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id", performance.HallId);
-            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id", performance.MovieId);
-            return View(performance);
+            return View(review);
         }
 
-        // POST: Performance/Edit/5
+        // POST: Review/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,MovieId,HallId,startTime")] Performance performance)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Rating,Description")] Review review)
         {
-            if (id != performance.Id)
+            if (id != review.Id)
             {
                 return NotFound();
             }
@@ -106,12 +97,12 @@ namespace website.Controllers
             {
                 try
                 {
-                    _context.Update(performance);
+                    _context.Update(review);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PerformanceExists(performance.Id))
+                    if (!ReviewExists(review.Id))
                     {
                         return NotFound();
                     }
@@ -122,12 +113,10 @@ namespace website.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["HallId"] = new SelectList(_context.Halls, "Id", "Id", performance.HallId);
-            ViewData["MovieId"] = new SelectList(_context.Movies, "Id", "Id", performance.MovieId);
-            return View(performance);
+            return View(review);
         }
 
-        // GET: Performance/Delete/5
+        // GET: Review/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,32 +124,30 @@ namespace website.Controllers
                 return NotFound();
             }
 
-            var performance = await _context.Performances
-                .Include(p => p.Hall)
-                .Include(p => p.Movie)
+            var review = await _context.Reviews
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (performance == null)
+            if (review == null)
             {
                 return NotFound();
             }
 
-            return View(performance);
+            return View(review);
         }
 
-        // POST: Performance/Delete/5
+        // POST: Review/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var performance = await _context.Performances.FindAsync(id);
-            _context.Performances.Remove(performance);
+            var review = await _context.Reviews.FindAsync(id);
+            _context.Reviews.Remove(review);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PerformanceExists(int id)
+        private bool ReviewExists(int id)
         {
-            return _context.Performances.Any(e => e.Id == id);
+            return _context.Reviews.Any(e => e.Id == id);
         }
     }
 }

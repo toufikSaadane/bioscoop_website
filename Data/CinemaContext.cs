@@ -1,10 +1,12 @@
 ﻿using System;
 using website.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace website.Data
 {
-    public class CinemaContext : DbContext
+    public class CinemaContext : IdentityDbContext<IdentityUser>
     {
         public CinemaContext(DbContextOptions<CinemaContext> options) : base(options) { }
 
@@ -20,6 +22,10 @@ namespace website.Data
 
         public DbSet<Arrangement> Arrangements { get; set; }
 
+        public DbSet<Review> Reviews { get; set; }
+
+        public DbSet<Enquete> Enquetes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -30,6 +36,8 @@ namespace website.Data
             modelBuilder.Entity<Snack>().HasData(FakeData.FakeSnack);
             modelBuilder.Entity<Arrangement>().HasData(FakeData.FakeArrangement);
             modelBuilder.Entity<Seats>().HasData(FakeData.FakeSeats);
+            modelBuilder.Entity<Review>().HasData(FakeData.FakeReview);
+            modelBuilder.Entity<Enquete>().HasData(FakeData.FakeEnquete);
         }
     }
 }
