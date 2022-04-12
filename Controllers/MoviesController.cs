@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -18,9 +19,9 @@ namespace website.Controllers
         {
             _context = context;
         }
-
-        // GET: Movies
-        public async Task<IActionResult> Index()
+           
+    // GET: Movies
+    public async Task<IActionResult> Index()
         {
             return View(await _context.Movies.ToListAsync());
         }
@@ -149,5 +150,6 @@ namespace website.Controllers
         {
             return _context.Movies.Any(e => e.Id == id);
         }
+
     }
 }

@@ -37,13 +37,19 @@
                         @if (User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Add Roles</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Rollen toevoegen</a>
                             </li>
                         }
                         @if (User.IsInRole("Manager"))
                         {
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Manager" asp-action="Index">Backoffice</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Movies" asp-action="Index">Films beheren</a>
                             </li>
                         }
                     </ul>
@@ -58,7 +64,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container-fluid">
-            &copy; 2022 - BlueAvans Cinema
+            &copy; 2022 - BlueAvans Cinema Luca van Leeuwen
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

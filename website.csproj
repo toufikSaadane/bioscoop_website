@@ -19,6 +19,10 @@
 	  <None Remove="Microsoft.AspNetCore.Identity" />
 	  <None Remove="Microsoft.Extensions.Identity.Core" />
 	  <None Remove="Microsoft.AspNetCore.Identity.UI" />
+	  <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+	  <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+	  <None Remove="Views\Review %28copy%29\" />
+	  <None Remove="Test\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
@@ -39,11 +43,15 @@
 	  <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
 	  <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.4" />
 	  <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.4" />
+	  <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.3" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\Movie\" />
 	  <Folder Include="Data\" />
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Views\Checkout\" />
+	  <Folder Include="Views\Enquete\" />
+	  <Folder Include="Test\" />
 	</ItemGroup>
 </Project>

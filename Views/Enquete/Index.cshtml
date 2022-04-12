@@ -1,0 +1,23 @@
+@model IEnumerable<website.Models.Enquete>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container" style="margin-top:5rem;">
+    <h2 style="text-align:center;">Reviews</h2>
+    <div class="container" style="width:35rem; margin-top:25px">
+        
+        
+    <div class="card bg-light mb-3" style="max-width: 40rem;">
+        <div class="card-header">  @Html.DisplayNameFor(model => model.QuestionText)</div>
+        <div class="card-body">
+            
+        </div>
+    </div>
+        <form class="form-inline my-2 my-lg-0">
+            <button asp-area="" asp-controller="Review" asp-action="Create" type="submit" class="btn btn-dark">Review Plaatsen</button>
+        </form>
+    </div>
+                            </div>
+
