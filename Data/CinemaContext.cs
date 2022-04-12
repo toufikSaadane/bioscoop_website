@@ -1,6 +1,7 @@
 ﻿using System;
 using website.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace website.Data
 {
@@ -15,6 +16,10 @@ namespace website.Data
         public DbSet<Performance> Performances { get; set; }
         
         public DbSet<Seats> Seats { get; set; }
+
+        public DbSet<Review> Reviews { get; set; }
+
+        public DbSet<Enquete> Enquetes { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

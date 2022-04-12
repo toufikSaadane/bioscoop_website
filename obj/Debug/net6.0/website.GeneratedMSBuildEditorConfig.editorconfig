@@ -1,0 +1,104 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = website
+build_property.RootNamespace = website
+build_property.ProjectDir = /Users/lucavanleeuwen/Desktop/bioscoop_website/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/lucavanleeuwen/Desktop/bioscoop_website
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Checkout/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2hlY2tvdXQvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Email/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWwvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Enquete/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5xdWV0ZS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Enquete/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5xdWV0ZS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Enquete/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5xdWV0ZS9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Enquete/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5xdWV0ZS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Enquete/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW5xdWV0ZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Movie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Movie/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Review/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Review/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Review/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Review/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Review/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmV2aWV3L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Seats/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2VhdHMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lucavanleeuwen/Desktop/bioscoop_website/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

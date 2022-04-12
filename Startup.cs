@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,7 +23,7 @@ namespace website
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CinemaContext>(options => options
-                .UseMySql(
+            .UseMySql(
                     Configuration.GetConnectionString("MariaDbConnectionString"),
                         new MySqlServerVersion(new Version(5, 5, 68))
                     )
@@ -62,6 +58,8 @@ namespace website
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
+
 
             app.UseEndpoints(endpoints =>
             {

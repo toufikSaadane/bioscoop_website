@@ -22,7 +22,7 @@ namespace website.Controllers
 
             var builder = new BodyBuilder();
             builder.TextBody = text;
-            builder.Attachments.Add(@"Image\QR-code.png");
+            builder.Attachments.Add(@"Image/QR-code.png");
             message.Body = builder.ToMessageBody(); 
 
             SmtpClient smtpClient = new SmtpClient();

@@ -4,20 +4,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using website.Data;
 
-namespace website.Controllers;
-
-public class SeatsController: Controller
+namespace website.Controllers
 {
-  private readonly CinemaContext _context;
+    public class SeatsController : Controller
+    {
+        private readonly CinemaContext _context;
 
-  public SeatsController(CinemaContext context)
-  {
-    _context = context;
-  }
-  
-  public async Task<IActionResult> Index()
-  {
-    var seats = await _context.Seats.ToListAsync();
-    return View(seats);
-  }
+        public SeatsController(CinemaContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var seats = await _context.Seats.ToListAsync();
+            return View(seats);
+        }
+    }
 }

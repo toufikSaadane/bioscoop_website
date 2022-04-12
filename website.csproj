@@ -15,22 +15,26 @@
 	  <None Remove="Data\" />
 	  <None Remove="ViewModels\" />
 	  <None Remove="Views\Checkout\" />
+	  <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+	  <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+	  <None Remove="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" />
+	  <None Remove="Microsoft.AspNetCore.Identity.UI" />
+	  <None Remove="MailKit" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Aspose.PDF" Version="22.2.0" />
+	  <PackageReference Include="Aspose.PDF" Version="22.3.0" />
 	  <PackageReference Include="EntityFramework" Version="6.4.4" />
-	  <PackageReference Include="Mailkit" Version="3.1.1" />
+	  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	    <PrivateAssets>all</PrivateAssets>
-	  </PackageReference>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	    <PrivateAssets>all</PrivateAssets>
 	  </PackageReference>
 	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
 	  <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.3" />
+	  <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="MailKit" Version="3.2.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Views\Movie\" />
